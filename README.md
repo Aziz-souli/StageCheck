@@ -1,10 +1,10 @@
-# 📊 StageCheck — OSINT & Detection of Fraudulent Internship Offers
+# StageCheck — OSINT & Detection of Fraudulent Internship Offers
 
 ---
 
-# 🇬🇧 English Version
+#  English Version
 
-## 🧭 Overview
+##  Overview
 
 StageCheck is an **OSINT (Open Source Intelligence)** and **Cyber Threat Intelligence (CTI)** platform designed to detect fraudulent or low-credibility internship and job offers.
 
@@ -14,7 +14,7 @@ The goal is to protect students and young professionals from scams, phishing, an
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 - Automatically collect internship/job offers from major platforms
 - Enrich data using OSINT & CTI sources
@@ -24,7 +24,7 @@ The goal is to protect students and young professionals from scams, phishing, an
 
 ---
 
-## 🌐 Target Platforms
+##  Target Platforms
 
 - Welcome to the Jungle
 - Stage.fr
@@ -34,7 +34,7 @@ The system is extensible and supports adding new data sources.
 
 ---
 
-## ⚠️ Problem Statement
+##  Problem Statement
 
 How can we build a scalable and automated system capable of detecting fraudulent internship offers using:
 
@@ -46,7 +46,7 @@ while maintaining accuracy and performance?
 
 ---
 
-## 🚨 Risks Addressed
+##  Risks Addressed
 
 - Personal data harvesting
 - Fake recruitment fees
@@ -56,7 +56,7 @@ while maintaining accuracy and performance?
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 The system includes:
 
@@ -87,13 +87,13 @@ OLLAMA_URL=""
 ---
 ## 3. Start the containers 
 docker compose up
-# 📊 StageCheck — OSINT & Détection des Offres de Stage Frauduleuses
+#  StageCheck — OSINT & Détection des Offres de Stage Frauduleuses
 
 ---
 
-# 🇫🇷 Version Française
+#  Version Française
 
-## 🧭 Vue d’ensemble
+##  Vue d’ensemble
 
 StageCheck est une plateforme d’**OSINT (Open Source Intelligence)** et de **Cyber Threat Intelligence (CTI)** conçue pour détecter les offres de stage et d’emploi frauduleuses ou de faible crédibilité.
 
@@ -103,7 +103,7 @@ L’objectif est de protéger les étudiants et jeunes professionnels contre les
 
 ---
 
-## 🎯 Objectifs
+##  Objectifs
 
 - Collecter automatiquement des offres de stage / emploi depuis les principales plateformes
 - Enrichir les données via des sources OSINT et CTI
@@ -113,7 +113,7 @@ L’objectif est de protéger les étudiants et jeunes professionnels contre les
 
 ---
 
-## 🌐 Plateformes ciblées
+##  Plateformes ciblées
 
 - Welcome to the Jungle  
 - Stage.fr  
@@ -123,7 +123,7 @@ Le système est extensible et permet d’ajouter facilement de nouvelles sources
 
 ---
 
-## ⚠️ Problématique
+##  Problématique
 
 Comment construire un système automatisé et scalable capable de détecter les offres de stage frauduleuses en utilisant :
 
@@ -135,7 +135,7 @@ tout en garantissant précision et performance ?
 
 ---
 
-## 🚨 Risques traités
+##  Risques traités
 
 - Vol de données personnelles  
 - Faux frais de recrutement  
@@ -145,7 +145,7 @@ tout en garantissant précision et performance ?
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 Le système inclut :
 
@@ -158,7 +158,7 @@ Le système inclut :
 
 ---
 
-## 🔧 Installation
+##  Installation
 
 ### 1. Installation de MISP (plateforme CTI)
 
