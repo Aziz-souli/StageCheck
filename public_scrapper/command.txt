@@ -1,0 +1,19 @@
+scrapy runspider jobteaser.py -a query=stage cybersécurité -a contract_type=internship -o jobs_jobteaser.json
+# Run all spiders
+python main.py start-all --query "data science" --country FR --contract internship
+
+python main.py start welcometothejungle --query "cybersecurité"
+
+# Check status
+python main.py status
+python main.py status --name jobteaser
+
+# Check MongoDB counts
+python main.py stats
+
+# Stop everything
+python main.py stop
+
+
+
+python main.py start-all --query "cybersecurité"  

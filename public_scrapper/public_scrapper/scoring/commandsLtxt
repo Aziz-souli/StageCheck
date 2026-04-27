@@ -1,0 +1,17 @@
+# Score all jobs in all databases
+python -m scoring.batch_scorer \
+  --mongo-uri "mongodb+srv://..." \
+  --model mistral
+
+# Score only one database
+python -m scoring.batch_scorer \
+  --db jobs_jobteaser \
+  --model mistral
+  --limit 5 
+
+  
+# Test without writing to MongoDB
+python -m scoring.batch_scorer \
+  --mongo-uri "mongodb+srv://..." \
+  --limit 5 \
+  --dry-run

@@ -1,0 +1,65 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+WORKDIR /app
+
+# ── System dependencies ─────────────────────────────────────────────────────
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3.11 \
+    python3.11-dev \
+    python3-pip \
+    python3.11-venv \
+    gcc \
+    libnss3 \
+    libnspr4 \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libcups2 \
+    libdrm2 \
+    libdbus-1-3 \
+    libxkbcommon0 \
+    libx11-6 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxext6 \
+    libxfixes3 \
+    libxrandr2 \
+    libgbm1 \
+    libpango-1.0-0 \
+    libcairo2 \
+    libasound2 \
+    libatspi2.0-0 \
+    libwayland-client0 \
+    fonts-liberation \
+    fonts-noto-color-emoji \
+    wget \
+    ca-certificates \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1 \
+    && update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1 \
+    && python -m pip install --upgrade pip
+
+# ── Python dependencies ─────────────────────────────────────────────────────
+COPY public_scrapper/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# ── Set browser path BEFORE installing so Playwright installs to the right place
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+
+# ── Install Playwright's Chromium into /ms-playwright ──────────────────────
+RUN playwright install chromium --with-deps
+
+# ── Application source ──────────────────────────────────────────────────────
+COPY public_scrapper/ ./public_scrapper/
+
+ENV PYTHONPATH="/app/public_scrapper:$PYTHONPATH"
+ENV PLAYWRIGHT_CHROMIUM_NO_SANDBOX=1
+
+WORKDIR /app/public_scrapper/backend
+
+EXPOSE 8000
+
+CMD ["uvicorn", "backend:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

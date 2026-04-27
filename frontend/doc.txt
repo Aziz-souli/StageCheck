@@ -1,0 +1,18 @@
+2.3 Outils Intégrés
+2.3.1 Outils de Reconnaissance
+Les principaux outils de reconnaissance utilisés dans ce projet incluent : Scrapy avec Playwright pour le scraping dynamique, python-whois pour l'analyse WHOIS, dnspython pour les requêtes DNS, et l'API VirusTotal pour la réputation des domaines.
+
+2.3.2 Outils d'Énumération
+Pour la phase d'énumération, le projet s'appuie sur Shodan pour la découverte des infrastructures exposées, AbuseIPDB pour l'évaluation de la réputation des adresses IP, et HaveIBeenPwned pour la vérification des fuites de données.
+
+2.3.3 Outils de Test d'Intrusion Web
+Dans le contexte de l'analyse des plateformes d'offres d'emploi, les outils de test web incluent Playwright pour l'interaction avec les pages JavaScript dynamiques, les DevTools pour l'analyse des requêtes réseau, et les sélecteurs CSS/XPath pour l'extraction de données structurées.
+
+2.3.4 Exploits Réseau et CVE
+L'intégration de Shodan permet d'identifier les CVE associées aux infrastructures des entreprises analysées, fournissant un indicateur pertinent pour évaluer la maturité de sécurité de l'organisation derrière une offre de stage.
+
+2.3.5 Élévation de Privilèges
+Dans le contexte de ce projet, l'analyse des configurations de sécurité des domaines (SPF, DKIM, DMARC) et l'évaluation des certificats SSL constituent des indicateurs proxy de la rigueur des pratiques de sécurité interne des entreprises.
+
+2.3.6 Détection, Rapport et Divers
+Le module MISP (Malware Information Sharing Platform) constitue l'outil central de partage de renseignements sur les menaces. Son intégration permet de croiser les domaines et IPs analysés avec une base de données collaborative d'indicateurs de compromission (IoCs) maintenus par la communauté CTI.

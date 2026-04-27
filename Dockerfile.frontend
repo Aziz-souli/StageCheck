@@ -1,0 +1,16 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copy package files first for layer caching
+COPY frontend/package*.json ./
+
+RUN npm install
+
+# Copy the rest of the frontend source
+COPY frontend/ ./
+
+EXPOSE 3000
+
+# npm run dev with host 0.0.0.0 so it's reachable outside the container
+CMD ["npm", "run", "dev"]

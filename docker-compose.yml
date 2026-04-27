@@ -1,0 +1,77 @@
+
+
+services:
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: osint_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    restart: unless-stopped
+ 
+  ollama-init:
+    image: ollama/ollama:latest
+    container_name: osint_ollama_init
+    depends_on:
+      ollama:
+        condition: service_healthy
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    entrypoint: >
+      /bin/sh -c "
+        echo 'Ollama is ready, pulling mistral...';
+        ollama pull mistral;
+        echo 'Done.';
+      "
+    restart: "no"
+ 
+  backend:
+    shm_size: "2gb"
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: osint_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./public_scrapper:/app/public_scrapper
+    environment:
+      - PYTHONPATH=/app/public_scrapper
+      - OLLAMA_HOST=http://ollama:11434
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: osint_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  ollama_data:

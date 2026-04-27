@@ -1,0 +1,37 @@
+{
+    "type": "job",
+    "job": {
+        "title": "Cybers\u00e9curit\u00e9 IA et pentest F/H",
+        "company_name": "Bpifrance",
+        "company_logo": "https://cdn-images.we
+lcometothejungle.com/lgHnO6W_Wq2-uGBgSgwYPuT1Cy_Gw04k_42MMFZe82E/rs:auto: 70: :/q: 85/czM6Ly93dHRqLXByb2R1Y3Rpb24vdXBsb2Fkcy9vcmdhbml6YXRpb24vbG9nby84MzY3
+LzE2MDc1OC80OWMwOGJjYy1mYzM3LTRkOGUtOTM2ZS02ZTVhNTVjNTQ4OWUucG5n", "company_url": null, "job_url": "https: //www.welcometothejungle.com/fr/companies/bpi
+-france-digital/jobs/cybersecurite-ia-et-pentest-f-h_maisons-alfort", "location": "Maisons-Alfort", "salary": "Salaire : Non sp\u00e9cifi\u00e9", "cont
+ract_type": null, "remote_type": null, "date_posted": "2026-02-16", "origine": "welcometothejungle", "description": "Vos missions au service de l\u2019
+\u00e9conomie fran\u00e7aise Nous recherchons  un \u00a0stagiaire en cybers\u00e9curit\u00e9 IA et  pentest  pour rejoindre  l\u2019\u00e9quipe d\u2019
+architecture s\u00e9curit\u00e9 au sein du p\u00f4le Expertise.  \u200b \u200b Vous int\u00e9grez le  Shared  Service S\u00e9curit\u00e9 au sein de la 
+direction de la cybers\u00e9curit\u00e9  pour le Groupe Bpifrance. \u200b \u200b Vous travaillerez en \u00e9troite collaboration avec un ou plusieurs a
+rchitectes de  l\u2019\u00e9quipe, le Product  Owner  et les autres membres du  Shared  Service, dans une  dynamique agile \u00e0 l\u2019\u00e9chell", "score": null,
+        "label": "suspicious",
+        "credibility_flags": [
+            "Vague and generic job description",
+            "No applying URL provided"
+        ],
+        "s1_score": 33, "s2_score": 0, "s3_score": 32, "s1_details": {"domain": "welcometothejungle.com", "whois": {"age_days": 7999, "registrar": "OVH, SAS", "country": "FR", "score":10,
+        "flags": []
+    },
+    "dns": {
+        "has_mx": true,
+        "has_spf": true,
+        "has_dkim": false,
+        "score": 7,
+        "flags": []
+    },
+    "ssl": {
+        "valid": true,
+        "issuer": "Amazon", "ex
+pires_in_days": 207, "score": 5, "flags": []}, "blacklist": {"blacklisted": false, "score": 5, "flags": []}, "web": {"reachable": true, "score": 8, "fl
+ags": []}}, "s2_details": {}, "s3_details": {"verdict": "suspicious", "confidence": "medium", "reasons": ["No specific salary provided", "Company websi
+te and industry not specified", "Lack of clear job duties and expectations"], "red_flags": ["Vague and generic job description", "No applying URL provi
+ded"], "positive_signals": ["Mention of a known company (Bpifrance)", "Specification of required profile"], "model": "mistral"}, "scored_at": "2026-04-
+06T11: 01: 03.948288"}}
