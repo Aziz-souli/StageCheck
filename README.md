@@ -75,7 +75,7 @@ Use the containerized version of MISP:
 ## 2. Environment Variables
 ---
 Create a `.env` file inside `publicscrapper/`:
-
+```env
 MONGO_URI=""
 VIRUSTOTAL_API_KEY=""
 ABUSEIPDB_API_KEY=""
@@ -83,6 +83,7 @@ SHODAN_API_KEY=""
 MISP_URL=""
 MISP_API_KEY=""
 OLLAMA_URL=""
+```
 ---
 ## 3. Start the containers 
 docker compose up
