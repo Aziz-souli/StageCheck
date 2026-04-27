@@ -170,6 +170,7 @@ Utiliser la version conteneurisée de MISP.
 
 Créer un fichier `.env` dans `publicscrapper/` :
 
+```env
 MONGO_URI=""
 VIRUSTOTAL_API_KEY=""
 ABUSEIPDB_API_KEY=""
@@ -177,6 +178,7 @@ SHODAN_API_KEY=""
 MISP_URL=""
 MISP_API_KEY=""
 OLLAMA_URL=""
+```
 ---
 ### 3. Démarrage des conteneurs
 docker compose up
